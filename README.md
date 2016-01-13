@@ -4,7 +4,7 @@ Often when implementing your server, you may want to execute a task that takes s
 
 ## Background jobs
 
-The purpose of a brackground job is to do some longer running task on the server __asynchronously__.  Since the task is asynchronous, the http response that the client is waiting for, does not depend on the result of your background job.
+The purpose of a background job is to do some longer running task on the server __asynchronously__.  Since the task is asynchronous, the http response that the client is waiting for, does not depend on the result of your background job.
 
 Email is a great example of a task that makes sense as a background job.  The client may sign up with your server to create a user account.  If the server plans to send a confirmation email, there is no need for the user to wait for the server to complete the task.  The server can send a response once the user has been created in the database and a background job has been created to send the email asynchronously.
 
